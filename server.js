@@ -14,13 +14,11 @@ app.use(express.static("public"));
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-
 app.get("/api/config", (req, res) => {
-    res.json({
-        success: true,
-    });
+  res.json({
+    success: true,
+  });
 });
-
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
