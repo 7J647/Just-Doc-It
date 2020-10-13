@@ -1,0 +1,32 @@
+.body {
+  background-image: url(/assets/image/futbolField.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.container {
+  margin: auto;
+  width: 70%;
+  padding: 10px;
+}
+
+.nav-bar {
+  background-color: rgb(28, 45, 52, 0.6) !important;
+}
+
+.trainer-search {
+  float: right;
+  width: 50%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 100px;
+  color: white;
+  font-family: "Staatliches", cursive;
+}
