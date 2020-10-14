@@ -8,7 +8,7 @@ module.exports = function (sequelize, DataTypes) {
       },
     },
     length_of_time: {
-      type: DataTypes.INT,
+      type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
         min: 1,
