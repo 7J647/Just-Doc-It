@@ -8,19 +8,19 @@ router.get("/trainers", (req, res) => {
     ///what needs to be displayed
     //DB query
 
-    res.render("trainers");
+    res.render("trainers/trainers");
 });
 
 router.get ("/trainers/new", (req, res) => {
-    res.render("new-trainer");
+    res.render("trainers/new-trainer");
 });
 
 router.get ("/trainers/:id", (req, res) => {
-    res.render("single-trainer");
+    res.render("trainers/single-trainer");
 });
 
 router.get ("/trainers/:id/edit", (req, res) => {
-    res.render("edit-trainer");
+    res.render("trainers/edit-trainer");
 });
 
 
