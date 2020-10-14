@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/jvalon9455/Just-Doc-It#readme",
   "dependencies": {
-    "2": "^3.0.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.1.0",
     "mysql2": "^2.2.5",
