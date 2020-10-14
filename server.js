@@ -2,7 +2,7 @@ const express = require("express");
 const exphbs = require("express-handlebars");
 const app = express();
 const db = require("./models");
-const trainersController = require("./controllers/trainersController");
+// const trainersController = require("./controllers/trainersController");
 
 const PORT = process.env.PORT || 8080;
 
@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.use(trainersController);
+// app.use(trainersController);
 
 
 app.get("/api/config", (req, res) => {
