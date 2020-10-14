@@ -24,6 +24,8 @@ router.get ("/trainers/:id/edit", (req, res) => {
 });
 
 
+
+
 // //API ROUTES
 // router.post("/api/trainers", function(req, res) {
 //     trainer.create([
