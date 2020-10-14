@@ -1,15 +1,24 @@
 const express = require("express");
 const router = express.Router();
+const db = require("../models");
 
 
 //VIEWS ROUTES
 
-router.get("/trainers", (req, res) => {
-    ///what needs to be displayed
-    //DB query
-
-    res.render("trainers/trainers");
+router.get("/trainer", (req, res) => {
+    db.Trainer.findAll().then((allTrainers) => {
+        res.render("trainers/trainers", { allTrainers: allTrainers });
+    });
 });
+
+
+router.get("/thing", (req, res) => {
+    // ALL the Things should be displayed
+    // DB query
+    db.Thing.findAll().then((allThings) => {
+      res.render("all-things", { allThings: allThings });
+    });
+  });
 
 router.get ("/trainers/new", (req, res) => {
     res.render("trainers/new-trainer");
@@ -27,6 +36,29 @@ router.get ("/trainers/:id/edit", (req, res) => {
 
 
 // //API ROUTES
+
+router.post("/api/trainer", (req, res) => {
+    console.log(req.body);
+    db.Trainer.create(req.body)
+      .then((newTrainer) => {
+        res.json({
+          error: false,
+          data: newTrainer,
+          message: "Successfully created new trainer.",
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+        res.status(500).json({
+          error: true,
+          data: null,
+          message: "Unable to create new trainer.",
+        });
+      });
+  });
+
+
+
 // router.post("/api/trainers", function(req, res) {
 //     trainer.create([
 //       "trainer_name" 
