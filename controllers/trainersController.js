@@ -11,6 +11,10 @@ router.get("/trainers", (req, res) => {
     res.render("trainers");
 });
 
+router.get ("/trainers/new", (req, res) => {
+    res.render("new-trainer");
+});
+
 router.get ("/trainers/:id", (req, res) => {
     res.render("single-trainer");
 });
@@ -19,9 +23,6 @@ router.get ("/trainers/:id/edit", (req, res) => {
     res.render("edit-trainer");
 });
 
-router.get ("/trainers/new", (req, res) => {
-    res.render("new-trainer");
-});
 
 // //API ROUTES
 // router.post("/api/trainers", function(req, res) {
