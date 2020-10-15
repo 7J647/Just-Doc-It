@@ -46,3 +46,7 @@ main {
   background-color: rgb(144, 150, 143);
   color: white;
 }
+
+.all-athletes {
+  align-content: center;
+}
