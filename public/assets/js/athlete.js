@@ -6,10 +6,11 @@ $(document).ready(function () {
   const athleteList = $("tbody");
   const athleteContainer = $(".author-container");
 
-  $("#add-athlete").click(function () {
-    $("add-athlete-form").show();
-  });
-  console.log("clicked");
+  //   $("#add-athlete").click(function () {
+  //     $("add-athlete-form").toggle();
+  //     $("add-athlete").hide();
+  //     console.log("clicked");
+  //   });
 
   $("#submit-athlete").click(function (event) {
     event.preventDefault();
