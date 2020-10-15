@@ -8,7 +8,7 @@ const app = express();
 const db = require("./models");
 const trainersController = require("./controllers/trainersController");
 const athleteController = require("./controllers/athleteController");
-
+const treatmentController = require("./controllers/treatmentController");
 
 const PORT = process.env.PORT || 8080;
 
@@ -36,6 +36,7 @@ app.get("/", (req, res) => {
 
 app.use(trainersController);
 app.use(athleteController);
+app.use(treatmentController);
 
 
 app.get("/api/config", (req, res) => {
