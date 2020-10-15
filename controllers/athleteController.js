@@ -8,6 +8,35 @@ router.get("/athlete", (req, res) => {
     });
   });
 
+//   router.get ("/athlete/new", (req, res) => {
+//     res.render("athlete/new-athlete");
+// });
+
+router.get ("/athlete/:id", (req, res) => {
+    db.Athlete.findOne({
+        where: {
+            id: req.params.id,
+        },
+    }).then((foundAthlete) => {
+        console.log(foundAthlete);
+        res.render("athletes/single-athlete", {
+            athlete_name: foundAthlete.athlete_name,
+            sport: foundAthlete.sport,
+            injury_site: foundAthlete.injury_site,
+            injury:  foundAthlete.injury
+        });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json({
+        error: true,
+        data: null,
+        message: "there has been an error.",
+      });
+});
+})
+
+
   router.post("/api/athlete", (req, res) => {
     console.log(req.body);
     db.Athlete.create(req.body)
