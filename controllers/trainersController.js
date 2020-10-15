@@ -12,13 +12,7 @@ router.get("/trainer", (req, res) => {
 });
 
 
-router.get("/thing", (req, res) => {
-    // ALL the Things should be displayed
-    // DB query
-    db.Thing.findAll().then((allThings) => {
-      res.render("all-things", { allThings: allThings });
-    });
-  });
+
 
 router.get ("/trainers/new", (req, res) => {
     res.render("trainers/new-trainer");
