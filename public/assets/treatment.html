@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+		<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+	</head>
+
+<body>
+	<div class="container hidden">
+		<div class="row top-30">
+      <div class="col-md-2 col-sm-2">
+        <a class="btn btn-light" href="/treatment">Go to Treatment</a>
+      </div>
+      <div class="col-md-2 col-sm-2">
+        <a class="btn btn-light" href="/athlete">Manage Athlete</a>
+      </div>
+    </div>
+		<div class="row">
+			<div class="col-md-6 offset-md-3">
+				<form id="treatment-form">
+					<div class="form-group">
+						<label for="Injury-Site">:</label>
+						<input placeholder="Input injury site" type="text" class="form-control" id="injury-location">
+						<br />
+						<label for="Injury-Type">:</label>
+						<input placeholder="Input injury" type="text" class="form-control" id="injury">
+						<br />
+						<label for="Treatment">Treatment:</label>
+						<textarea placeholder="Post Treatment Plan" class="form-control" rows="10" id="treatment-plan"></textarea>
+						<div class="form-group">
+							<label for="category">Select Athlete:</label>
+							<select class="custom-select" id="athlete">
+  						</select>
+						</div>
+						<br />
+						<button type="submit" class="btn btn-success submit">Save</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- Custom Script -->
+	<script src="js/treatment.js" type="text/javascript"></script>
+
+</body>
+
+</html>
