@@ -50,4 +50,30 @@ router.post("/api/treatment", (req, res) => {
       });
   });
 
+  router.put("/api/treatment/:id", (req, res) => {
+    db.Treatment.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    }).then((updatedTreatment) => {
+      console.log(updatedTreatment);
+      res.json({
+        error: false,
+        data: updatedTreatment,
+        message: "Successfully updated athlete's treatment.",
+      });
+      // res.end();
+    // });
+  })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json({
+        error: true,
+        data: null,
+        message: "Unable to update athlete's treatment.",
+    });
+  });
+});
+
+
   module.exports = router;
