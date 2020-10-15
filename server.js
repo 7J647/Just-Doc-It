@@ -7,6 +7,7 @@ const {
 const app = express();
 const db = require("./models");
 const trainersController = require("./controllers/trainersController");
+const athleteController = require("./controllers/athleteController");
 
 
 const PORT = process.env.PORT || 8080;
@@ -34,6 +35,7 @@ app.get("/", (req, res) => {
 });
 
 app.use(trainersController);
+app.use(athleteController);
 
 
 app.get("/api/config", (req, res) => {
