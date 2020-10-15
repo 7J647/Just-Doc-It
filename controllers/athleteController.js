@@ -57,4 +57,29 @@ router.get ("/athlete/:id", (req, res) => {
       });
   });
 
+  router.put("/api/athlete/:id", (req, res) => {
+    db.Athlete.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    }).then((updatedAthlete) => {
+      console.log(updatedAthlete);
+      res.json({
+        error: false,
+        data: updatedAthlete,
+        message: "Successfully updated athlete.",
+      });
+      // res.end();
+    // });
+  })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json({
+        error: true,
+        data: null,
+        message: "Unable to update athlete.",
+    });
+  });
+});
+
   module.exports = router;
