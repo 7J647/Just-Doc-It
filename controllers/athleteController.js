@@ -82,4 +82,27 @@ router.get ("/athlete/:id", (req, res) => {
   });
 });
 
+  router.delete("/api/athlete/:id", (req, res) => {
+    db.Athlete.destroy({
+      where: {
+        id: req.params.id,
+      },
+    }).then((deletedAthlete) => {
+      console.log(deletedAthlete);
+      res.json({
+        error: false,
+        data: deletedAthlete,
+        message: "Successfully deleted athlete.",
+      });
+   })
+     .catch((err) => {
+        console.log(err);
+        res.status(500).json({
+          error: true,
+          data: null,
+          message: "Unable to delete athlete.",
+    });
+  });
+});
+
   module.exports = router;
