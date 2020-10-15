@@ -12,15 +12,40 @@ router.get("/trainer", (req, res) => {
 });
 
 
+// router.get ("/trainers/new", (req, res) => {
+//     res.render("trainers/new-trainer");
+// });
 
+// router.get ("/trainer/:id", (req, res) => {
+//     db.Trainer.findOne({
+//         where: {
+//             id: res.params.id,
+//         },
+//     }).then((foundTrainer) => {
+//         console.log(foundTrainer);
+//         res.render("single-trainer", {
+//             trainer_name: foundTrainer.trainer_name,
+//             id: foundTrainer.id,
+//         });
+//     });
+// });
+//     res.render("trainers/single-trainer");
+// });
 
-router.get ("/trainers/new", (req, res) => {
-    res.render("trainers/new-trainer");
-});
-
-router.get ("/trainers/:id", (req, res) => {
-    res.render("trainers/single-trainer");
-});
+// router.get("/thing/:id", (req, res) => {
+//     db.Thing.findOne({
+//       where: {
+//         id: req.params.id,
+//       },
+//     }).then((foundThing) => {
+//       console.log(foundThing);
+//       res.render("single-thing", {
+//         name: foundThing.name,
+//         price: foundThing.price,
+//         id: foundThing.id,
+//       });
+//     });
+//   });
 
 router.get ("/trainers/:id/edit", (req, res) => {
     res.render("trainers/edit-trainer");
@@ -51,6 +76,28 @@ router.post("/api/trainer", (req, res) => {
       });
   });
 
+//   router.put("/api/trainer/:id", (req, res) => {
+//       db.Thing.update(req.body, {
+//           where: {
+//               id: req.params.id,
+//           },
+//       }).then((updatedTrainer) => {
+//           console.log(updatedTrainer);
+//           res.end();
+//       });
+//   });
+
+
+//   router.put("/api/thing/:id", (req, res) => {
+//     db.Thing.update(req.body, {
+//       where: {
+//         id: req.params.id,
+//       },
+//     }).then((updatedObject) => {
+//       console.log(updatedObject);
+//       res.end();
+//     });
+//   });
 
 
 // router.post("/api/trainers", function(req, res) {
