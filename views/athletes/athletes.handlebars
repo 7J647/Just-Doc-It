@@ -1,13 +1,52 @@
-<main>
-    <h1>ALL ATHLETES</h1>
+<main class="container">
+    <h1>ATHLETES</h1>
 
-    {{#each allAthlete}}
-    <h3>{{athlete_name}}</h3>
-    </br>
-    {{sport}}
-    </br>
-    {{injury_site}}
-    </br>
-    {{injury}}
-    {{/each}}
+    <button class="button" id="add-athlete">ADD ATHLETE</button>
+    <div class="row" id="add-athlete-form">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s6">
+                    <label for="athlete_name">FULL NAME</label>
+                    <input class="athlete_name" type="text" class="validate">
+                </div>
+                <div class="input-field col s6">
+                    <input id="sport" type="text" class="validate">
+                    <label for="sport">SPORT</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <label for="injury_site">INJURY SITE</label>
+                    <input class="injury_sitee" type="text" class="validate">
+                </div>
+                <div class="input-field col s6">
+                    <input id="injury" type="text" class="validate">
+                    <label for="injury">INJURY</label>
+                </div>
+            </div>
+            <button type='submit' class="button">SUBMIT!</button>
+        </form>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <input type="text" placeholder="SEARCH ATHLETE" id="search-bar" name="search-bar"><i
+                class="fas fa-search"></i>
+        </div>
+    </div>
+    <section class="row athletes-container">
+        {{#each allAthlete}}
+        <h3>{{athlete_name}}</h3>
+        <hr>
+        <div class="col s4">
+            <h5>SPORT: {{sport}}</h5>
+        </div>
+        <div class="col s4">
+            <h5>INJURY SITE: {{injury_site}}</h5>
+        </div>
+        <div class="col s4">
+            <h5>INJURY: {{injury}}</h5>
+            {{/each}}
+        </div>
+    </section>
+
 </main>
