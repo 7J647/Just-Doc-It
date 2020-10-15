@@ -1,29 +1,8 @@
 <main class="container">
     <h1>ATHLETES</h1>
 
-    <a href="/athlete"><button class="button all-athletes">ADD ATHLETE</button></a>
-    <div class="row">
-        <div class="col s12">
-            <input type="text" placeholder="SEARCH ATHLETE" id="search-bar" name="search-bar"><i
-                class="fas fa-search"></i>
-        </div>
-    </div>
-    <section class="row athletes-container">
-        {{#each allAthlete}}
-        <h3>{{athlete_name}}</h3>
-        <hr>
-        <div class="col s4">
-            <h5>SPORT: {{sport}}</h5>
-        </div>
-        <div class="col s4">
-            <h5>INJURY SITE: {{injury_site}}</h5>
-        </div>
-        <div class="col s4">
-            <h5>INJURY: {{injury}}</h5>
-            {{/each}}
-        </div>
-    </section>
-    {{!-- <div class="row">
+    <button class="button" id="add-athlete">ADD ATHLETE</button>
+    <div class="row" id="add-athlete-form">
         <form class="col s12">
             <div class="row">
                 <div class="input-field col s6">
@@ -47,5 +26,27 @@
             </div>
             <button type='submit' class="button">SUBMIT!</button>
         </form>
-    </div> --}}
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <input type="text" placeholder="SEARCH ATHLETE" id="search-bar" name="search-bar"><i
+                class="fas fa-search"></i>
+        </div>
+    </div>
+    <section class="row athletes-container">
+        {{#each allAthlete}}
+        <h3>{{athlete_name}}</h3>
+        <hr>
+        <div class="col s4">
+            <h5>SPORT: {{sport}}</h5>
+        </div>
+        <div class="col s4">
+            <h5>INJURY SITE: {{injury_site}}</h5>
+        </div>
+        <div class="col s4">
+            <h5>INJURY: {{injury}}</h5>
+            {{/each}}
+        </div>
+    </section>
+
 </main>
