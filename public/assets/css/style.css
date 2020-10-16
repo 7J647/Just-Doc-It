@@ -71,6 +71,10 @@ hr {
   font-size: 16px;
 }
 
+select {
+  display: block;
+}
+
 .athlete-name-link,
 .input-color {
   color: white !important;
