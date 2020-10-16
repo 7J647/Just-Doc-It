@@ -15,5 +15,15 @@ module.exports = function (sequelize, DataTypes) {
       },
     },
   });
+
+
+  // Treatment.associate = function(models){
+  //   Treatment.belongsTo(models.Athlete, {
+  //     foreignKey: {
+  //       allowNull: false
+  //     }
+  //   });
   return Treatment;
 };
+
+// };
