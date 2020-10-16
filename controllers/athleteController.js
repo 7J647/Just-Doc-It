@@ -3,10 +3,10 @@ const router = express.Router();
 const db = require("../models");
 
 router.get("/athlete", (req, res) => {
-    db.Athlete.findAll().then((allAthlete) => {
-      res.render("athletes/athletes", { allAthlete: allAthlete });
-    });
+  db.Athlete.findAll().then((allAthlete) => {
+    res.render("athletes/athletes", { allAthlete: allAthlete });
   });
+});
 
 //   router.get ("/athlete/new", (req, res) => {
 //     res.render("athlete/new-athlete");
@@ -31,18 +31,49 @@ router.get ("/athlete/:id", (req, res) => {
             injury:  foundAthlete.injury,
             id: foundAthlete.id,
             Treatments: foundAthlete.Treatments,
-        }
-        );
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json({
-        error: true,
-        data: null,
-        message: "there has been an error.",
-      });
-});
-})
+          }
+                );
+              })
+              .catch((err) => {
+                console.log(err);
+                res.status(500).json({
+                  error: true,
+                  data: null,
+                  message: "there has been an error.",
+                });
+              });
+          });
+// router.get("/athlete/:id", (req, res) => {
+//   db.Athlete.findOne({
+//     where: {
+//       id: req.params.id,
+//     },
+//     include: db.Treatment,
+//   })
+//     .then((foundAthlete) => {
+//       console.log(foundAthlete);
+//       // res.json(foundAthlete);
+//       res.render(
+//         "athletes/single-athlete",
+//         // foundAthlete
+//         {
+//           athlete_name: foundAthlete.athlete_name,
+//           sport: foundAthlete.sport,
+//           injury_site: foundAthlete.injury_site,
+//           injury: foundAthlete.injury,
+//           id: foundAthlete.id,
+//         }
+//       );
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//       res.status(500).json({
+//         error: true,
+//         data: null,
+//         message: "there has been an error.",
+//       });
+//     });
+// });
 
 
 // router.get ("/athlete/:id", (req, res) => {
@@ -109,14 +140,16 @@ router.get ("/athlete/:id", (req, res) => {
           message: "Unable to create new athlete.",
         });
       });
-  });
+    })
+    
 
-  router.put("/api/athlete/:id", (req, res) => {
-    db.Athlete.update(req.body, {
-      where: {
-        id: req.params.id,
-      },
-    }).then((updatedAthlete) => {
+router.put("/api/athlete/:id", (req, res) => {
+  db.Athlete.update(req.body, {
+    where: {
+      id: req.params.id,
+    },
+  })
+    .then((updatedAthlete) => {
       console.log(updatedAthlete);
       res.json({
         error: false,
@@ -124,39 +157,40 @@ router.get ("/athlete/:id", (req, res) => {
         message: "Successfully updated athlete.",
       });
       // res.end();
-    // });
-  })
+      // });
+    })
     .catch((err) => {
       console.log(err);
       res.status(500).json({
         error: true,
         data: null,
         message: "Unable to update athlete.",
+      });
     });
-  });
 });
 
-  router.delete("/api/athlete/:id", (req, res) => {
-    db.Athlete.destroy({
-      where: {
-        id: req.params.id,
-      },
-    }).then((deletedAthlete) => {
+router.delete("/api/athlete/:id", (req, res) => {
+  db.Athlete.destroy({
+    where: {
+      id: req.params.id,
+    },
+  })
+    .then((deletedAthlete) => {
       console.log(deletedAthlete);
       res.json({
         error: false,
         data: deletedAthlete,
         message: "Successfully deleted athlete.",
       });
-   })
-     .catch((err) => {
-        console.log(err);
-        res.status(500).json({
-          error: true,
-          data: null,
-          message: "Unable to delete athlete.",
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json({
+        error: true,
+        data: null,
+        message: "Unable to delete athlete.",
+      });
     });
-  });
 });
 
-  module.exports = router;
+module.exports = router;
