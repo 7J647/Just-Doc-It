@@ -23,6 +23,16 @@ hr {
   background-color: white;
 }
 
+/* .footer-bg {
+  background-color: rgb(28, 45, 52, 0.5);
+  opacity: 0.3;
+  color: white;
+  text-align: center;
+  font-size: 140%;
+  padding: 20px;
+  flex-shrink: 0;
+} */
+
 .body {
   background-image: url(/assets/image/futbolField.jpg);
   background-repeat: no-repeat;
@@ -61,6 +71,15 @@ hr {
   font-size: 16px;
 }
 
+.athlete-name-link,
+.input-color {
+  color: white !important;
+}
+
+/* .search-btn {
+  background-color: transparent;
+} */
+
 .button:hover {
   background-color: rgb(144, 150, 143);
   color: white;
@@ -71,10 +90,18 @@ hr {
   left: 50%;
 }
 
+.back-btn {
+  float: right;
+}
+
 #search-bar {
   width: 30%;
 }
 
-/* #add-athlete-form {
+#add-athlete-form {
   display: none;
-} */
+}
+
+#athlete-font {
+  font-size: 80px;
+}
