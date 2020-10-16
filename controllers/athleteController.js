@@ -19,12 +19,15 @@ router.get ("/athlete/:id", (req, res) => {
         },
     }).then((foundAthlete) => {
         console.log(foundAthlete);
-        res.render("athletes/single-athlete", {
+        res.render("athletes/single-athlete", 
+        {
             athlete_name: foundAthlete.athlete_name,
             sport: foundAthlete.sport,
             injury_site: foundAthlete.injury_site,
-            injury:  foundAthlete.injury
-        });
+            injury:  foundAthlete.injury,
+            id: foundAthlete.id
+        }
+        );
     })
     .catch((err) => {
       console.log(err);

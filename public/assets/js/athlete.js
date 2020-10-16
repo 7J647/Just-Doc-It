@@ -1,4 +1,7 @@
 $(document).ready(function () {
+
+    console.log("connected");
+
   const nameInput = $("#athlete_name");
   const sportInput = $("#sport");
   const injurySiteInput = $("#injury_site");
