@@ -9,9 +9,9 @@ router.get("/treatment", (req, res) => {
 });
 
 router.get("/treatment/:id", (req, res) => {
-    db.Treatment.findOne({
+    db.Treatment.findAll({
         where: {
-            id: req.params.id,
+            AthleteId: req.params.id,
         },
     }).then((foundTreatment) => {
         console.log(foundTreatment);
@@ -32,7 +32,9 @@ router.get("/treatment/:id", (req, res) => {
 
 router.post("/api/treatment", (req, res) => {
     console.log(req.body);
-    db.Treatment.create(req.body)
+    const newTreatment = req.body;
+    newTreatment.AthleteId = 1;
+    db.Treatment.create(newTreatment)
         .then((newTreatment) => {
             res.json({
                 error: false,
