@@ -44,6 +44,11 @@
             <div class="col s4">
                 <h5>INJURY: {{injury}}</h5>
             </div>
+            {{#each Treatments}}
+            <p>{{treatment_name}}
+                {{progress_note}}
+            </p>
+            {{/each}}
         </div>
     </section>
 </main>

@@ -17,16 +17,20 @@ router.get ("/athlete/:id", (req, res) => {
         where: {
             id: req.params.id,
         },
+        include: db.Treatment,
     }).then((foundAthlete) => {
         console.log(foundAthlete);
+        // res.json(foundAthlete);
         res.render("athletes/single-athlete", 
-        {
-            athlete_name: foundAthlete.athlete_name,
-            sport: foundAthlete.sport,
-            injury_site: foundAthlete.injury_site,
-            injury:  foundAthlete.injury,
-            id: foundAthlete.id
-        }
+        foundAthlete
+        // // {
+            
+        //   // athlete_name: foundAthlete.athlete_name,
+        //     // sport: foundAthlete.sport,
+        //     // injury_site: foundAthlete.injury_site,
+        //     // injury:  foundAthlete.injury,
+        //     // id: foundAthlete.id
+        // // }
         );
     })
     .catch((err) => {

@@ -7,23 +7,21 @@ module.exports = function (sequelize, DataTypes) {
         len: [1],
       },
     },
-    length_of_time: {
-      type: DataTypes.INTEGER,
+    progress_note: {
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        min: 1,
+        len: [1],
       },
     },
   });
 
-
-  // Treatment.associate = function(models){
-  //   Treatment.belongsTo(models.Athlete, {
-  //     foreignKey: {
-  //       allowNull: false
-  //     }
-  //   });
+  Treatment.associate = function (models) {
+    Treatment.belongsTo(models.Athlete, {
+      foreignKey: {
+        allowNull: false,
+      },
+    });
+  };
   return Treatment;
 };
-
-// };
