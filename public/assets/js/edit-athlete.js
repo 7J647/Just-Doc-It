@@ -3,9 +3,9 @@ $(document).ready(function () {
     const sportInput = $("#sport");
     const injurySiteInput = $("#injury_site");
     const injuryInput = $("#injury");
-    const athleteID = $("#id");
-    const athleteList = $("tbody");
-    const athleteContainer = $(".author-container");
+    // const athleteID = $("#id");
+    // const athleteList = $("tbody");
+    // const athleteContainer = $(".author-container");
 
 
 

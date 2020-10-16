@@ -29,5 +29,12 @@ module.exports = function (sequelize, DataTypes) {
             }
         }
     });
+
+    // Athlete.associate = function(models){
+    //     Athlete.hasMany(models.Treatment, {
+    //         onDelete: "cascade"
+    //     });
+    // };
+
     return Athlete;
 };

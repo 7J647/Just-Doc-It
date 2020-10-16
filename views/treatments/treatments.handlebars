@@ -1,6 +1,57 @@
-<h1>all treatments will go here</h1>
 
-{{#each allTreatment}}
-    {{treatment_name}}
-    {{length_of_time}}
-{{/each}}
+{<main class="container">
+    <h1>TREATMENT</h1>
+    <h2>ADD TREATMENT</h2>
+    {{!-- <button class="button" id="add-athlete">ADD ATHLETE</button> --}}
+    <div class="row" id="add-athlete-form">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s6">
+                    <label for="injury">INJURY</label>
+                    <input id="injury" type="text" class="validate">
+                </div>
+                <div class="input-field col s6">
+                    <input id="sport" type="text" class="validate">
+                    <label for="injury_site">INJURY SITE</label>
+                </div>
+            </div>
+            <div class="form-group">
+						<br/>
+						<label for="plan">Treatment/Rehab Plan:</label>
+						<textarea placeholder="Input Treatment and Rehab Plan" class="form-control" rows="10" id="body"></textarea>
+						<div class="form-group">
+							<label for="category">Progress Note:</label>
+                            <textarea placeholder="Post Progress Note" class="form-control" rows="10" id="body"></textarea>
+						</div>
+						<br/>
+						
+					</div>
+            <button type='submit' class="button" id="submit-treatment">SAVE</button>
+        </form>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <input type="text" placeholder="SEARCH ATHLETE" id="search-bar" name="search-bar"><i
+                class="fas fa-search"></i>
+        </div>
+    </div>
+    <section class="row athletes-container">
+        {{#each allTreatment}}
+        <h3><a href="/treatment/{{id}}">{{athlete_name}}</a></h3>
+        <hr>
+        <div class="col s4">
+            <h5>TREATMENT: {{treatment_name}}</h5>
+        </div>
+        <div class="col s4">
+            <h5>LENGTH OF TIME: {{length_of_time}}</h5>
+        </div>
+        <div class="col s4">
+            <h5>INJURY SITE: {{injury_site}}</h5>
+        </div>
+        <div class="col s4">
+            <h5>INJURY: {{injury}}</h5>
+            {{/each}}
+        </div>
+    </section>
+
+</main>
