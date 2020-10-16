@@ -1,13 +1,10 @@
 $(document).ready(function () {
-
-    console.log("connected");
+  console.log("connected");
 
   const nameInput = $("#athlete_name");
   const sportInput = $("#sport");
   const injurySiteInput = $("#injury_site");
   const injuryInput = $("#injury");
-  const athleteList = $("tbody");
-  const athleteContainer = $(".author-container");
 
   //   $("#add-athlete").click(function () {
   //     $("add-athlete-form").toggle();
