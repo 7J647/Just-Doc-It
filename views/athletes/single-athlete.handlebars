@@ -1,4 +1,9 @@
+<nav class="nav-bar">
+    <h5>ATHLETE'S INFO</h5>
+</nav>
 <main class="container">
+    <button class="button back-btn"><a class="input-color" href="/athlete">Back</a></button>
+    </br>
     <h2>{{athlete_name}}</h2>
     {{!-- <button class="button" id="add-athlete">ADD ATHLETE</button> --}}
     <div class="row" id="update-athlete-form">
@@ -6,24 +11,25 @@
             <div class="row">
                 <div class="input-field col s6">
                     <label for="athlete_name">FULL NAME</label>
-                    <input id="athlete_name" type="text" class="validate" value="{{athlete_name}}">
+                    <input id="athlete_name" type="text" class="input-color" value="{{athlete_name}}">
                 </div>
                 <div class="input-field col s6">
-                    <input id="sport" type="text" class="validate" value="{{sport}}">
+                    <input id="sport" type="text" class="input-color" value="{{sport}}">
                     <label for="sport">SPORT</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s6">
                     <label for="injury_site">INJURY SITE</label>
-                    <input id="injury_site" type="text" class="validate" value="{{injury_site}}">
+                    <input id="injury_site" type="text" class="input-color" value="{{injury_site}}">
                 </div>
                 <div class="input-field col s6">
-                    <input id="injury" type="text" class="validate" value="{{injury}}">
+                    <input id="injury" type="text" class="input-color" value="{{injury}}">
                     <label for="injury">INJURY</label>
                 </div>
             </div>
-            <a href="/athlete"><button type='submit' class="button" id="delete-athlete" data-id="{{id}}">DELETE</button></a>
+            <a href="/athlete"><button type='submit' class="button" id="delete-athlete"
+                    data-id="{{id}}">DELETE</button></a>
             <button type='submit' class="button" id="update-athlete" data-id="{{id}}">SUBMIT</button>
         </form>
     </div>
@@ -41,4 +47,8 @@
         </div>
     </section>
 </main>
-<a href="/athlete"><button>Back</button></a>
+{{!-- <footer class="footer-bg">
+    <div>
+        <p>Copyright© 2020</p>
+    </div>
+</footer> --}}

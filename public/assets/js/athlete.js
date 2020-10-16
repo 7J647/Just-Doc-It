@@ -6,11 +6,11 @@ $(document).ready(function () {
   const injurySiteInput = $("#injury_site");
   const injuryInput = $("#injury");
 
-  //   $("#add-athlete").click(function () {
-  //     $("add-athlete-form").toggle();
-  //     $("add-athlete").hide();
-  //     console.log("clicked");
-  //   });
+  $("#add-athlete").click(() => {
+    $("#add-athlete-form").show();
+    $("#add-athlete").hide();
+    console.log("clicked");
+  });
 
   $("#submit-athlete").click(function (event) {
     event.preventDefault();
