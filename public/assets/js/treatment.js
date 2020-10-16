@@ -3,6 +3,7 @@ $(document).ready(function () {
 
   const treatment_name = $("#treatment_name");
   const progress_note = $("#progress_note");
+  const athlete = $("#athlete");
   
   //   $("#add-athlete").click(function () {
   //     $("add-athlete-form").toggle();
@@ -22,6 +23,7 @@ $(document).ready(function () {
     }
     athleteTreatment({
       treatment_name: treatment_name.val().trim(),
+      AthleteId: athlete.val(),
       progress_note: progress_note.val().trim(),
     });
   });

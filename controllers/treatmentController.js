@@ -3,8 +3,8 @@ const router = express.Router();
 const db = require("../models");
 
 router.get("/treatment", (req, res) => {
-    db.Treatment.findAll().then((allTreatment) => {
-        res.render("treatments/treatments", { allTreatment: allTreatment });
+    db.Athlete.findAll().then((allAthlete) => {
+        res.render("treatments/treatments", { allAthlete: allAthlete });
     });
 });
 
@@ -33,7 +33,7 @@ router.get("/treatment/:id", (req, res) => {
 router.post("/api/treatment", (req, res) => {
     console.log(req.body);
     const newTreatment = req.body;
-    newTreatment.AthleteId = 1;
+    // newTreatment.AthleteId = 1;
     db.Treatment.create(newTreatment)
         .then((newTreatment) => {
             res.json({
