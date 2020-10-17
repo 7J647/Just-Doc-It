@@ -17,8 +17,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Static directory
-app.use(express.static("public"));
 app.use('/static', express.static('public'))
+app.use(express.static("public"));
+
 
 
 app.engine(
