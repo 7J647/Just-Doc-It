@@ -75,14 +75,16 @@ select {
   display: block;
 }
 
-.athlete-name-link,
+.athlete-name-link {
+  color: white;
+}
 .input-color {
   color: white !important;
 }
 
-/* .search-btn {
-  background-color: transparent;
-} */
+.athlete-name-link:hover {
+  color: rgb(3, 155, 229);
+}
 
 .button:hover {
   background-color: rgb(144, 150, 143);
