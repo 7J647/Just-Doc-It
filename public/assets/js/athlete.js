@@ -14,7 +14,6 @@ $(document).ready(function () {
 
   $("#submit-athlete").click(function (event) {
     event.preventDefault();
-    // upsertAthlete();
     console.log("add");
     if (
       !nameInput.val().trim() ||
