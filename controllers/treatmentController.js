@@ -33,7 +33,6 @@ router.get("/treatment/:id", (req, res) => {
 router.post("/api/treatment", (req, res) => {
     console.log(req.body);
     const newTreatment = req.body;
-    // newTreatment.AthleteId = 1;
     db.Treatment.create(newTreatment)
         .then((newTreatment) => {
             res.json({
@@ -64,8 +63,6 @@ router.put("/api/treatment/:id", (req, res) => {
             data: updatedTreatment,
             message: "Successfully updated athlete's treatment.",
         });
-        // res.end();
-        // });
     })
         .catch((err) => {
             console.log(err);
@@ -80,27 +77,26 @@ router.put("/api/treatment/:id", (req, res) => {
 
 router.delete("/api/treatment/:id", (req, res) => {
     db.Treatment.destroy({
-      where: {
-        id: req.params.id,
-      },
+        where: {
+            id: req.params.id,
+        },
     }).then((deletedTreatment) => {
-      console.log(deletedTreatment);
-      res.json({
-        error: false,
-        data: deletedTreatment,
-        message: "Successfully deleted athlete's treatment even though I'm not supposed to.",
-      });
-   })
-     .catch((err) => {
-        console.log(err);
-        res.status(500).json({
-          error: true,
-          data: null,
-          message: "Unable to delete athlete's treatment.",
-    });
-  });
+        console.log(deletedTreatment);
+        res.json({
+            error: false,
+            data: deletedTreatment,
+            message: "Successfully deleted athlete's treatment even though I'm not supposed to.",
+        });
+    })
+        .catch((err) => {
+            console.log(err);
+            res.status(500).json({
+                error: true,
+                data: null,
+                message: "Unable to delete athlete's treatment.",
+            });
+        });
 });
-
 
 
 module.exports = router;

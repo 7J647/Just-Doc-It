@@ -10,7 +10,6 @@ $(document).ready(function () {
 
     $("#delete-athlete").click(function (event) {
         event.preventDefault();
-        // upsertAthlete();
         console.log("delete");
         if (
             !nameInput.val().trim() ||
@@ -32,21 +31,10 @@ $(document).ready(function () {
 
     function deletedAthlete(athleteData, id) {
         $.ajax({ method: "DELETE", url: "/api/athlete/" + id, data: athleteData })
-        .then(() => window.location.assign("/athlete"));
+            .then(() => window.location.assign("/athlete"));
     }
 });
 
-    // Function for handling what happens when the delete button is pressed
-// function handleDeleteButtonPress() {
-//     var listItemData = $(this).parent("td").parent("tr").data("author");
-//     var id = listItemData.id;
-//     $.ajax({
-//       method: "DELETE",
-//       url: "/api/athlete/" + id
-//     })
-//     //   .then(getAuthors);
-//   }
-// });
 
 
 
