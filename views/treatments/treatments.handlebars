@@ -1,55 +1,36 @@
+<nav class="nav-bar">
+    <h5>TREATMENT/PROGRESSION</h5>
+</nav>
 <main class="container">
+    <button class="button back-btn"><a class="input-color" href="/athlete">BACK</a></button>
+    </br>
     <h1>TREATMENT</h1>
     <h2>ADD TREATMENT</h2>
-    {{!-- <button class="button" id="add-athlete">ADD ATHLETE</button> --}}
     <div class="row" id="">
         <form class="col s12">
-            <div class="row">
-                <div class="input-field col s6">
-                    <label for="injury">INJURY</label>
-                    <input id="injury" type="text" class="validate">
-                </div>
-                <div class="input-field col s6">
-                    <input id="sport" type="text" class="validate">
-                    <label for="injury_site">INJURY SITE</label>
-                </div>
-            </div>
             <div class="form-group">
-						<br/>
-						<label for="plan">Treatment/Rehab Plan:</label>
-						<textarea placeholder="Input Treatment and Rehab Plan" class="form-control" rows="10" id="treatment_name"></textarea>
-						<div class="form-group">
-							<label for="category">Progress Note:</label>
-                            <textarea placeholder="Post Progress Note" class="form-control" rows="10" id="progress_note"></textarea>
-						</div>
-						<br/>
-						
-					</div>
-         <div class="form-group">
-							<label for="category">Select Athlete:</label>
-							<select class="custom-select" id="athlete">
-                                {{#each allAthlete}}
-                                <option value="{{id}}">{{athlete_name}}</option>
-                                {{/each}}
-  						</select>
-						</div>       
-
-
-
-                {{!-- <br />
+                <br />
                 <label for="plan">Treatment/Rehab Plan:</label>
-                <textarea placeholder="Input Treatment and Rehab Plan" class="form-control" rows="10"
+                <textarea placeholder="Input Treatment and Rehab Plan" class="input-color" rows="10"
                     id="treatment_name"></textarea>
                 <div class="form-group">
                     <label for="category">Progress Note:</label>
                     <textarea placeholder="Post Progress Note" class="form-control" rows="10"
                         id="progress_note"></textarea>
                 </div>
-                <br /> --}}
+                <br />
 
             </div>
-            <button type='submit' class="button" id="submit-treatment">SAVE</button>
-            <button type='button' class="button"><a href="/athlete/{{id}}">BACK</a></button>
-        </form>
+            <div class="form-group">
+                <label for="category">Select Athlete:</label>
+                <select class="custom-select" id="athlete">
+                    {{#each allAthlete}}
+                    <option value="{{id}}">{{athlete_name}}</option>
+                    {{/each}}
+                </select>
+            </div>
+    </div>
+    <button type='submit' class="button" id="submit-treatment">SAVE</button>
+    </form>
     </div>
 </main>

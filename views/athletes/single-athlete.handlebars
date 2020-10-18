@@ -2,7 +2,7 @@
     <h5>ATHLETE'S INFO</h5>
 </nav>
 <main class="container">
-    <button class="button back-btn"><a class="input-color" href="/athlete">Back</a></button>
+    <button class="button back-btn"><a class="input-color" href="/athlete">BACK</a></button>
     </br>
     <h2>{{athlete_name}}</h2>
     {{!-- <button class="button" id="add-athlete">ADD ATHLETE</button> --}}
@@ -38,19 +38,34 @@
     <section class="athletes-container">
         <div class="row">
             <div class="col s4">
-                <h5>SPORT: {{sport}}</h5>
+                <h5>SPORT:</h5>
+                <h6>{{sport}}</h6>
             </div>
             <div class="col s4">
-                <h5>INJURY SITE: {{injury_site}}</h5>
+                <h5>INJURY SITE:</h5>
+                <h6>{{injury_site}}</h6>
             </div>
             <div class="col s4">
-                <h5>INJURY: {{injury}}</h5>
+                <h5>INJURY:</h5>
+                <h6>{{injury}}</h6>
             </div>
-            {{#each Treatments}}
-            <p>{{treatment_name}}
-                {{progress_note}}
-            </p>
-            {{/each}}
+        </div>
+    </section>
+    <section class="athletes-container">
+        <div class="row">
+            <div class="col s12">
+                {{#each Treatments}}
+                <h5> TREATMENT:</h5>
+                <h6> {{treatment_name}}</h6>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <h5> PROGRESS NOTE:</h5>
+                <h6>{{progress_note}}</h6>
+                <hr>
+                {{/each}}
+            </div>
         </div>
     </section>
 </main>
