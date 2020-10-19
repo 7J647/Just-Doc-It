@@ -61,6 +61,8 @@ From this page the Trainer can also "Add Treatment".  Clicking on this link take
 
 The app utilizes a mySQL database with the following tables:  Trainer, Athlete, Treatment.  Trainer is one-to-many with both Athlete and Treatment.  Athlete is one-to-one with Trainer and one-to-many with Treatment.  Treatment is one-to-one with Athlete and one-to-one with Trainer.
 
+<img src ="./public/assets/image/readMe/erds.png" alt= "Just-Doc-It.com ERDS">
+
 
 ## Usage
 
@@ -78,15 +80,15 @@ Once cloned a user needs to run npm init -y and then run NPM install for the fol
 --mysql2
 --sequelize
 
-<img src ="./image1.png" alt= "Just-Doc-It.com home page">
-<img src ="./image2.png" alt= "Just-Doc-It.com trainer page">
-<img src ="./image3.png" alt= "Just-Doc-It.com create athletes form">
-<img src ="./image4.png" alt= "Just-Doc-It.com all athletes page">
-<img src ="./image5.png" alt= "Just-Doc-It.com individual athletes page">
-<img src ="./image5.png" alt= "Just-Doc-It.com treatment page">
+<img src ="./public/assets/image/readMe/image1.png" alt= "Just-Doc-It.com home page">
+<img src ="./public/assets/image/readMe/image2.png" alt= "Just-Doc-It.com trainer page">
+<img src ="./public/assets/image/readMe/image3.png" alt= "Just-Doc-It.com create athletes form">
+<img src ="./public/assets/image/readMe/image4.png" alt= "Just-Doc-It.com all athletes page">
+<img src ="./public/assets/image/readMe/image5.png" alt= "Just-Doc-It.com individual athletes page">
+<img src ="./public/assets/image/readMe/image6.png" alt= "Just-Doc-It.com treatment page">
 
 
-## Credits and Contact
+## Contributing
 
 J-Squad 2 Collaborators (in alphabetical order by first name):
 
@@ -121,8 +123,8 @@ SOFTWARE.
 
 ---
 
-## Contributing
+## Questions
 
-For other developers who would like to provide feedback on how to improve the work done on this project or offer other suggestions, please feel free to do so via the GitHub repositories provided.
+For questions or for other developers who would like to provide feedback on how to improve the work done on this project or offer other suggestions, please feel free to do so via the GitHub repositories provided.
 
 &copy;[2020] [J-Squad 2:  Jamie Jones, Jeff Flynn, and John "Jimmy" Alonzo]
