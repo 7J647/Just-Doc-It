@@ -68,6 +68,8 @@ The app utilizes a mySQL database with the following tables:  Trainer, Athlete, 
 
 The URL for this application is http://www.just-doc-it.com.
 
+The Heroku link for this application is https://just-doc-it.herokuapp.com/.
+
 This application can only be used with fictional athletes and patients until further notice.
 
 To run this app the repo first must be cloned at Github on this link:  https://github.com/jvalon9455/Just-Doc-It
